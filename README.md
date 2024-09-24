@@ -2,7 +2,7 @@
 
 Portfolio website build using HTML5, CSS3, JavaScript and jQuery.
 
-<a href="https://Riloraspopo.netlify.app/" target="_blank">**Visit Now** 🚀</a>
+<a href="https://riloraspopo.github.io/" target="_blank">**Visit Now** 🚀</a>
 
 ## 📌 Tech Stack
 
