@@ -15,7 +15,8 @@
     "image": "metrokita",
     "category": "android",
     "links": {
-      "view": "https://play.google.com/store/apps/details?id=id.go.kotametro.metrokita&hl=en"
+      "view": "https://play.google.com/store/apps/details?id=id.go.kotametro.metrokita&hl=en",
+      "code": "https://github.com/riloraspopo/"
     }
   }
 ]
