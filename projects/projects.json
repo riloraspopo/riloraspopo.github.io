@@ -18,5 +18,15 @@
       "view": "https://play.google.com/store/apps/details?id=id.go.kotametro.metrokita&hl=en",
       "code": "https://github.com/riloraspopo/"
     }
+  },
+  {
+    "name": "MEWS-OBSTETRI (mW)",
+    "desc": "Mobile Apps built using Flutter with emergency notification incase there is emergency pasien",
+    "image": "mews",
+    "category": "android",
+    "links": {
+      "view": "https://play.google.com/store/apps/details?id=id.go.metrokota.mews&hl=en",
+      "code": "https://github.com/riloraspopo/mews_flutter"
+    }
   }
 ]
