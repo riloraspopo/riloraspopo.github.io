@@ -8,5 +8,14 @@
       "view": "https://metromaps.metrokota.go.id/",
       "code": "https://github.com/riloraspopo/peta"
     }
+  },
+  {
+    "name": "Metro Kita",
+    "desc": "Mobile Apps built using Flutter with online radio stream features and realtime stream CCTV with under Linux Server with Python",
+    "image": "metrokita",
+    "category": "android",
+    "links": {
+      "view": "https://play.google.com/store/apps/details?id=id.go.kotametro.metrokita&hl=en"
+    }
   }
 ]
