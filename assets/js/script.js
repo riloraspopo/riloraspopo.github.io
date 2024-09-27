@@ -117,7 +117,7 @@ function showProjects(projects) {
   let projectHTML = "";
   projects
     .slice(0, 10)
-    .filter((project) => project.category != "android")
+    // .filter((project) => project.category != "android")
     .forEach((project) => {
       projectHTML += `
         <div class="box tilt">
