@@ -38,5 +38,25 @@
       "view": "https://play.google.com/store/apps/details?id=goid.metrokota.stbm&hl=en",
       "code": "https://github.com/riloraspopo/stbm_flutter"
     }
+  },
+  {
+    "name": "LSnap",
+    "desc": "Mobile Apps built using java with GPS built in, this app can take picture and save it with coordinate so we can see the result on google Maps for easy monitoring",
+    "image": "lsnap",
+    "category": "android",
+    "links": {
+      "view": "https://www.youtube.com/watch?v=nysMxBj2nJc",
+      "code": "https://github.com/riloraspopo/"
+    }
+  },
+  {
+    "name": "Linux Ricing",
+    "desc": "Linux dots that based on Arch Linux for DE hyperland. look, shortcut and apps is cuztomized based on my experience",
+    "image": "linux",
+    "category": "linux",
+    "links": {
+      "view": "https://www.youtube.com/watch?v=nysMxBj2nJc",
+      "code": "https://github.com/riloraspopo/dots-hyprland"
+    }
   }
 ]
