@@ -13,7 +13,7 @@
     "name": "Metro Kita",
     "desc": "Mobile Apps built using Flutter with online radio stream features and realtime stream CCTV with under Linux Server with Python",
     "image": "metrokita",
-    "category": "android",
+    "category": "flutter",
     "links": {
       "view": "https://play.google.com/store/apps/details?id=id.go.kotametro.metrokita&hl=en",
       "code": "https://github.com/riloraspopo/"
@@ -23,7 +23,7 @@
     "name": "MEWS-OBSTETRI (mW)",
     "desc": "Mobile Apps built using Flutter with emergency notification incase there is emergency pasien",
     "image": "mews",
-    "category": "android",
+    "category": "flutter",
     "links": {
       "view": "https://play.google.com/store/apps/details?id=id.go.metrokota.mews&hl=en",
       "code": "https://github.com/riloraspopo/mews_flutter"
@@ -33,7 +33,7 @@
     "name": "STBM",
     "desc": "Mobile Apps built using Flutter with GPS built in, so we can see the result on google Maps for easy monitoring",
     "image": "stbm",
-    "category": "android",
+    "category": "flutter",
     "links": {
       "view": "https://play.google.com/store/apps/details?id=goid.metrokota.stbm&hl=en",
       "code": "https://github.com/riloraspopo/stbm_flutter"
