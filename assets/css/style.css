@@ -506,11 +506,18 @@ header .navbar ul li a:hover {
 .skills .container .bar .info i {
   font-size: 4rem;
 }
+.skills .container .bar .info img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}
 .skills .container .bar .info span {
   font-size: 2rem;
   font-weight: 500;
   font-family: "Poppins";
-  margin-left: 0.5rem;
+  margin-left: 0;
+  text-align: center;
+  width: 100%;
 }
 /* skills media queries starts*/
 @media screen and (max-width: 600px) {
