@@ -40,26 +40,28 @@ $(document).ready(function () {
     );
   });
 
-  // <!-- emailjs to mail contact form data -->
+  // <!-- redirect contact form to Telegram -->
   $("#contact-form").submit(function (event) {
-    emailjs.init("user_TTDmetQLYgWCLzHTDgqxm");
-
-    emailjs
-      .sendForm("contact_service", "template_contact", "#contact-form")
-      .then(
-        function (response) {
-          console.log("SUCCESS!", response.status, response.text);
-          document.getElementById("contact-form").reset();
-          alert("Form Submitted Successfully");
-        },
-        function (error) {
-          console.log("FAILED...", error);
-          alert("Form Submission Failed! Try Again");
-        }
-      );
     event.preventDefault();
+    const name = $(this).find('input[name="name"]').val().trim();
+    const email = $(this).find('input[name="email"]').val().trim();
+    const phone = $(this).find('input[name="phone"]').val().trim();
+    const message = $(this).find('textarea[name="message"]').val().trim();
+
+    let text = `Hi, I got your info from popow.my.id.\n\nName: ${name}\nEmail: ${email}`;
+    if (phone) {
+      text += `\nPhone: ${phone}`;
+    }
+    text += `\n\nI need:\n${message}`;
+
+    const telegramUrl = `https://t.me/riloraspopo?text=${encodeURIComponent(text)}`;
+    const win = window.open(telegramUrl, "_blank");
+    if (!win || win.closed || typeof win.closed === "undefined") {
+      window.location.href = telegramUrl;
+    }
+    this.reset();
   });
-  // <!-- emailjs to mail contact form data -->
+  // <!-- redirect contact form to Telegram -->
 });
 
 document.addEventListener("visibilitychange", function () {
