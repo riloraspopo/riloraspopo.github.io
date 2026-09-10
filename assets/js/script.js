@@ -1,20 +1,22 @@
 $(document).ready(function () {
+  // Mobile menu toggle
   $("#menu").click(function () {
     $(this).toggleClass("fa-times");
     $(".navbar").toggleClass("nav-toggle");
   });
 
+  // Scroll spy & scroll-top button
   $(window).on("scroll load", function () {
     $("#menu").removeClass("fa-times");
     $(".navbar").removeClass("nav-toggle");
 
-    if (window.scrollY > 60) {
+    if (window.scrollY > 80) {
       document.querySelector("#scroll-top").classList.add("active");
     } else {
       document.querySelector("#scroll-top").classList.remove("active");
     }
 
-    // scroll spy
+    // Scroll spy
     $("section").each(function () {
       let height = $(this).height();
       let offset = $(this).offset().top - 200;
@@ -28,16 +30,19 @@ $(document).ready(function () {
     });
   });
 
-  // smooth scrolling
+  // Smooth scrolling for navigation anchors
   $('a[href*="#"]').on("click", function (e) {
-    e.preventDefault();
-    $("html, body").animate(
-      {
-        scrollTop: $($(this).attr("href")).offset().top,
-      },
-      500,
-      "linear"
-    );
+    const target = $(this).attr("href");
+    if (target && target.startsWith("#") && $(target).length) {
+      e.preventDefault();
+      $("html, body").animate(
+        {
+          scrollTop: $(target).offset().top - 65,
+        },
+        500,
+        "linear"
+      );
+    }
   });
 
   // <!-- redirect contact form to Telegram -->
@@ -64,32 +69,33 @@ $(document).ready(function () {
   // <!-- redirect contact form to Telegram -->
 });
 
+// Dynamic Tab title on visibility change
 document.addEventListener("visibilitychange", function () {
   if (document.visibilityState === "visible") {
-    document.title = "Portfolio | Rilo raspopo";
+    document.title = "Rilo Raspopo | Full Stack Engineer & IT Specialist";
     $("#favicon").attr("href", "assets/images/favicon.png");
   } else {
-    document.title = "Come Back To Portfolio";
+    document.title = "⚡ Come back to rilo.dev";
     $("#favicon").attr("href", "assets/images/favhand.png");
   }
 });
 
-// <!-- typed js effect starts -->
+// <!-- Typed.js effect -->
 var typed = new Typed(".typing-text", {
   strings: [
-    "flutter development",
-    "web development",
-    "android development",
-    "frontend development",
-    "backend development",
+    "Full-Stack Development",
+    "Flutter & Mobile Engineering",
+    "Linux Infrastructure & GIS",
+    "Backend APIs & Python",
+    "IT System Architecture",
   ],
   loop: true,
   typeSpeed: 50,
   backSpeed: 25,
-  backDelay: 500,
+  backDelay: 1200,
 });
-// <!-- typed js effect ends -->
 
+// Async data fetcher
 async function fetchData(type = "skills") {
   let response;
   type === "skills"
@@ -99,66 +105,76 @@ async function fetchData(type = "skills") {
   return data;
 }
 
+// Render skills cards
 function showSkills(skills) {
   let skillsContainer = document.getElementById("skillsContainer");
+  if (!skillsContainer) return;
   let skillHTML = "";
   skills.forEach((skill) => {
     skillHTML += `
-        <div class="bar">
-              <div class="info">
-                <img src=${skill.icon} alt="skill" />
-                <span>${skill.name}</span>
-              </div>
-            </div>`;
+      <div class="bar tilt">
+        <div class="info">
+          <img src="${skill.icon}" alt="${skill.name}" loading="lazy" />
+          <span>${skill.name}</span>
+        </div>
+      </div>`;
   });
   skillsContainer.innerHTML = skillHTML;
+
+  VanillaTilt.init(document.querySelectorAll(".skills .tilt"), {
+    max: 12,
+    speed: 400,
+    glare: true,
+    "max-glare": 0.2,
+  });
 }
 
+// Render projects cards
 function showProjects(projects) {
   let projectsContainer = document.querySelector("#work .box-container");
+  if (!projectsContainer) return;
   let projectHTML = "";
-  projects
-    .slice(0, 10)
-    // .filter((project) => project.category != "android")
-    .forEach((project) => {
-      projectHTML += `
-        <div class="box tilt">
-      <img draggable="false" src="/assets/images/projects/${project.image}.png" alt="project" />
-      <div class="content">
-        <div class="tag">
-        <h3>${project.name}</h3>
+  projects.slice(0, 10).forEach((project) => {
+    projectHTML += `
+      <div class="box tilt">
+        <div class="img-wrapper">
+          <img draggable="false" src="./assets/images/projects/${project.image}.png" alt="${project.name}" />
         </div>
-        <div class="desc">
-          <p>${project.desc}</p>
-          <div class="btns">
-            <a href="${project.links.view}" class="btn" target="_blank"><i class="fas fa-eye"></i> View</a>
-            <a href="${project.links.code}" class="btn" target="_blank">Code <i class="fas fa-code"></i></a>
+        <div class="content">
+          <span class="category-badge">${project.category || "Tech"}</span>
+          <div class="tag">
+            <h3>${project.name}</h3>
+          </div>
+          <div class="desc">
+            <p>${project.desc}</p>
+            <div class="btns">
+              <a href="${project.links.view}" class="btn btn-primary" target="_blank">
+                <i class="fas fa-external-link-alt"></i> Demo
+              </a>
+              <a href="${project.links.code}" class="btn btn-secondary" target="_blank">
+                <i class="fab fa-github"></i> Code
+              </a>
+            </div>
           </div>
         </div>
-      </div>
-    </div>`;
-    });
+      </div>`;
+  });
   projectsContainer.innerHTML = projectHTML;
 
-  // <!-- tilt js effect starts -->
-  VanillaTilt.init(document.querySelectorAll(".tilt"), {
-    max: 15,
-  });
-  // <!-- tilt js effect ends -->
-
-  /* ===== SCROLL REVEAL ANIMATION ===== */
-  const srtop = ScrollReveal({
-    origin: "top",
-    distance: "80px",
-    duration: 1000,
-    reset: true,
+  VanillaTilt.init(document.querySelectorAll("#work .tilt"), {
+    max: 12,
+    speed: 400,
+    glare: true,
+    "max-glare": 0.15,
   });
 
-  /* SCROLL PROJECTS */
-  srtop.reveal(".work .box", { interval: 200 });
+  if (typeof srtop !== "undefined") {
+    srtop.reveal(".work .box", { interval: 150 });
+  }
 }
 
-fetchData().then((data) => {
+// Load data
+fetchData("skills").then((data) => {
   showSkills(data);
 });
 
@@ -166,83 +182,35 @@ fetchData("projects").then((data) => {
   showProjects(data);
 });
 
-// <!-- tilt js effect starts -->
+// Initialize VanillaTilt on all pre-existing tilt elements
 VanillaTilt.init(document.querySelectorAll(".tilt"), {
-  max: 15,
+  max: 10,
+  speed: 400,
+  glare: true,
+  "max-glare": 0.15,
 });
-// <!-- tilt js effect ends -->
-
-// pre loader start
-// function loader() {
-//     document.querySelector('.loader-container').classList.add('fade-out');
-// }
-// function fadeOut() {
-//     setInterval(loader, 500);
-// }
-// window.onload = fadeOut;
-// pre loader end
-
-// diraspopo developer mode
-document.onkeydown = function (e) {
-  if (e.keyCode == 123) {
-    return false;
-  }
-  if (e.ctrlKey && e.shiftKey && e.keyCode == "I".charCodeAt(0)) {
-    return false;
-  }
-  if (e.ctrlKey && e.shiftKey && e.keyCode == "C".charCodeAt(0)) {
-    return false;
-  }
-  if (e.ctrlKey && e.shiftKey && e.keyCode == "J".charCodeAt(0)) {
-    return false;
-  }
-  if (e.ctrlKey && e.keyCode == "U".charCodeAt(0)) {
-    return false;
-  }
-};
 
 /* ===== SCROLL REVEAL ANIMATION ===== */
 const srtop = ScrollReveal({
   origin: "top",
-  distance: "80px",
-  duration: 1000,
-  reset: true,
+  distance: "60px",
+  duration: 800,
+  reset: false,
 });
 
-/* SCROLL HOME */
-srtop.reveal(".home .content h3", { delay: 200 });
-srtop.reveal(".home .content p", { delay: 200 });
-srtop.reveal(".home .content .btn", { delay: 200 });
+/* Reveal triggers */
+srtop.reveal(".home .content h1", { delay: 150 });
+srtop.reveal(".home .content .hero-subtitle", { delay: 200 });
+srtop.reveal(".home .content .hero-description", { delay: 250 });
+srtop.reveal(".home .hero-actions", { delay: 300 });
+srtop.reveal(".home .socials", { delay: 350 });
+srtop.reveal(".home .terminal-col", { delay: 300 });
 
-srtop.reveal(".home .image", { delay: 400 });
-srtop.reveal(".home .linkedin", { interval: 600 });
-srtop.reveal(".home .github", { interval: 800 });
-srtop.reveal(".home .twitter", { interval: 1000 });
-srtop.reveal(".home .telegram", { interval: 600 });
-srtop.reveal(".home .instagram", { interval: 600 });
-srtop.reveal(".home .dev", { interval: 600 });
+srtop.reveal(".about .image", { delay: 200 });
+srtop.reveal(".about .content", { delay: 300 });
+srtop.reveal(".about .stats-grid", { delay: 350 });
 
-/* SCROLL ABOUT */
-srtop.reveal(".about .content h3", { delay: 200 });
-srtop.reveal(".about .content .tag", { delay: 200 });
-srtop.reveal(".about .content p", { delay: 200 });
-srtop.reveal(".about .content .box-container", { delay: 200 });
-srtop.reveal(".about .content .resumebtn", { delay: 200 });
-
-/* SCROLL SKILLS */
-srtop.reveal(".skills .container", { interval: 200 });
-srtop.reveal(".skills .container .bar", { delay: 400 });
-
-/* SCROLL EDUCATION */
-srtop.reveal(".education .box", { interval: 200 });
-
-/* SCROLL PROJECTS */
-srtop.reveal(".work .box", { interval: 200 });
-
-/* SCROLL EXPERIENCE */
-srtop.reveal(".experience .timeline", { delay: 400 });
-srtop.reveal(".experience .timeline .container", { interval: 400 });
-
-/* SCROLL CONTACT */
-srtop.reveal(".contact .container", { delay: 400 });
-srtop.reveal(".contact .container .form-group", { delay: 400 });
+srtop.reveal(".education .box", { delay: 200 });
+srtop.reveal(".experience .timeline .container", { interval: 200 });
+srtop.reveal(".contact .image-box", { delay: 200 });
+srtop.reveal(".contact #contact-form", { delay: 300 });

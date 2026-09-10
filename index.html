@@ -6,14 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="keywords"
-      content="Rilo Raspopo, portfolio, Rilo, full stack dev, personal portfolio lifecodes, portfolio design, portfolio website, personal portfolio"
+      content="Rilo Raspopo, portfolio, Rilo, full stack dev, android developer, flutter developer, IT specialist, software engineer"
     />
     <meta
       name="description"
-      content="Welcome to Rilo's Portfolio. Full-Stack Web Developer and Android App Developer"
+      content="Portfolio of Rilo Raspopo - Full-Stack Engineer, Mobile App Developer & IT Specialist."
     />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="./assets/css/style.css" />
+
     <!-- Font Awesome -->
     <link
       rel="stylesheet"
@@ -22,6 +32,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+
     <!-- Favicon -->
     <link
       id="favicon"
@@ -29,47 +40,73 @@
       href="./assets/images/favicon.png"
       type="image/x-png"
     />
-    <title>Portfolio | Rilo Raspopo</title>
+    <title>Rilo Raspopo | Full Stack Engineer & IT Specialist</title>
   </head>
-  <body oncontextmenu="return false">
-    <!-- pre loader -->
-    <!-- <div class="loader-container">
-  <img draggable="false" src="./assets/images/preloader.gif" alt="">
-</div> -->
+  <body>
+    <!-- particles background -->
+    <div id="particles-js"></div>
 
     <!-- navbar starts -->
     <header>
-      <a href="/" class="logo"><i class="fab fa-node-js"></i> Rilo</a>
+      <a href="/" class="logo">
+        <span class="bracket">&lt;/&gt;</span> rilo.dev
+      </a>
 
       <div id="menu" class="fas fa-bars"></div>
+
       <nav class="navbar">
         <ul>
           <li><a class="active" href="#home">Home</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#skills">Skills</a></li>
           <li><a href="#education">Education</a></li>
-          <li><a href="#work">Work</a></li>
+          <li><a href="#work">Projects</a></li>
           <li><a href="#experience">Experience</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
+
+      <div class="nav-actions">
+        <div class="status-pill">
+          <span class="status-dot"></span>
+          OPEN TO WORK
+        </div>
+      </div>
     </header>
     <!-- navbar ends -->
 
     <!-- hero section starts -->
     <section class="home" id="home">
-      <div id="particles-js"></div>
-
       <div class="content">
-        <h2>
-          Hi There,<br />
-          I'm <span>Rilo </span>Raspopo
+        <div class="hero-eyebrow">
+          <i class="fas fa-terminal"></i>
+          <span>SYSTEM STATUS: ONLINE</span>
+        </div>
+
+        <h1>
+          Hi There, I'm <br />
+          <span class="gradient-text">Rilo Raspopo</span>
+        </h1>
+
+        <h2 class="hero-subtitle">
+          Specializing in <span class="typing-text"></span>
         </h2>
-        <p>i am into <span class="typing-text"></span></p>
-        <a href="#about" class="btn"
-          ><span>About Me</span>
-          <i class="fas fa-arrow-circle-down"></i>
-        </a>
+
+        <p class="hero-description">
+          Full-Stack Software Engineer & IT Specialist. Graduate of Informatics
+          Engineering from Telkom University. Building scalable web services,
+          cross-platform Flutter apps, and ricing Linux environments.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#work" class="btn btn-primary">
+            <i class="fas fa-laptop-code"></i> View Projects
+          </a>
+          <a href="#contact" class="btn btn-secondary">
+            <i class="fab fa-telegram-plane"></i> Contact Me
+          </a>
+        </div>
+
         <div class="socials">
           <ul class="social-icons">
             <li>
@@ -104,19 +141,56 @@
                 class="instagram"
                 aria-label="Instagram"
                 href="https://www.instagram.com/riloraspopo"
-                ><i class="fab fa-instagram" target="_blank"></i
+                target="_blank"
+                ><i class="fab fa-instagram"></i
               ></a>
             </li>
           </ul>
         </div>
       </div>
-      <div class="image">
-        <img
-          draggable="false"
-          class="tilt"
-          src="./assets/images/hero.png"
-          alt=""
-        />
+
+      <!-- Developer Terminal Widget -->
+      <div class="terminal-col">
+        <div class="terminal-card tilt">
+          <div class="terminal-header">
+            <div class="terminal-dots">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+            </div>
+            <div class="terminal-title">rilo@archlinux: ~ (bash)</div>
+            <div class="terminal-actions">
+              <i class="fas fa-circle" style="color: var(--accent-emerald); font-size: 0.8rem;"></i>
+            </div>
+          </div>
+          <div class="terminal-body">
+            <p class="cmd"><span class="prompt">rilo@archlinux:~$</span> neofetch --profile</p>
+            <div class="terminal-grid">
+              <div class="terminal-ascii">
+                <pre>
+   /\
+  /  \
+ / /\ \
+/ /__\ \
+\/____\/
+                </pre>
+              </div>
+              <div class="terminal-info">
+                <p><span class="key">User:</span> <span class="val">Rilo Raspopo</span></p>
+                <p><span class="key">Role:</span> <span class="val accent">Full-Stack & Mobile</span></p>
+                <p><span class="key">OS:</span> <span class="val">Arch Linux (Hyprland)</span></p>
+                <p><span class="key">Tech:</span> <span class="val">Flutter, JS/TS, Python</span></p>
+                <p><span class="key">Career:</span> <span class="val">IT Specialist @ Dinkes</span></p>
+                <p><span class="key">Alma Mater:</span> <span class="val">Telkom University</span></p>
+                <p><span class="key">Uptime:</span> <span class="val accent">8+ Years in Dev</span></p>
+              </div>
+            </div>
+            <div class="terminal-footer-status">
+              <span class="status-tag">● git:(main) ✔</span>
+              <span class="latency-tag">⚡ ping: 14ms (popow.my.id)</span>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
     <!-- hero section ends -->
@@ -124,52 +198,65 @@
     <!-- about section starts -->
     <section class="about" id="about">
       <h2 class="heading">
-        <i class="fas fa-user-alt"></i> About <span>Me</span>
+        <span class="code-tag">// 01. ABOUT ME</span>
+        Engineering <span>Software</span> from Kernel to Frontend
       </h2>
 
       <div class="row">
         <div class="image">
-          <img
-            draggable="false"
-            class="tilt"
-            src="./assets/images/profile2.jpg"
-            alt=""
-          />
+          <div class="profile-wrapper tilt">
+            <img
+              draggable="false"
+              src="./assets/images/profile2.jpg"
+              alt="Rilo Raspopo"
+            />
+          </div>
         </div>
         <div class="content">
-          <h3>I'm Rilo</h3>
-          <span class="tag">Full Stack Developer</span>
+          <span class="tag">&lt;Full-Stack Engineer /&gt;</span>
+          <h3>Hello, I'm Rilo Raspopo</h3>
 
           <p>
-            I'm an accomplished individual with a Bachelor's degree in
-            Informatics Engineering. As a skilled full-stack developer, I
-            specialize in various platforms, including Flutter for
-            cross-platform mobile development, web development, Android
-            applications, and desktop applications. My expertise encompasses the
-            entire software development lifecycle, showcasing a comprehensive
-            understanding of informatics engineering. I bring a wealth of
-            knowledge to the field, demonstrating adaptability and a commitment
-            to staying current with evolving technology. Whether crafting
-            user-friendly mobile interfaces, developing dynamic websites, or
-            creating robust desktop applications, my skill set positions me as a
-            valuable asset in the world of software development, combining
-            academic achievement with practical skills.
+            Accomplished Software Engineer with a Bachelor of Engineering in
+            Informatics from Telkom University. I specialize across the entire
+            software lifecycle: from architecting cross-platform mobile apps with
+            Flutter, building high-throughput web APIs, deploying Linux-based CCTV & GIS
+            streaming servers, to managing mission-critical municipal IT infrastructure.
           </p>
 
-          <div class="box-container">
-            <div class="box">
-              <p><span> email : </span> rilo.raspopo37@gmail.com</p>
-              <p><span> place : </span> Indonesia - +62 853 7803 1373</p>
+          <div class="stats-grid">
+            <div class="stat-card">
+              <div class="num">8+</div>
+              <div class="label">Years Exp</div>
+            </div>
+            <div class="stat-card">
+              <div class="num">20+</div>
+              <div class="label">Projects Shipped</div>
+            </div>
+            <div class="stat-card">
+              <div class="num">100%</div>
+              <div class="label">Clean Architecture</div>
+            </div>
+            <div class="stat-card">
+              <div class="num">Arch</div>
+              <div class="label">Daily Driver</div>
             </div>
           </div>
 
-          <div class="resumebtn">
+          <div class="about-actions">
             <a
               href="https://docs.google.com/document/d/1zmlxjgJLT19rjolhOJbnG7g-pZbmjIBMhs1lWXxrK_c/edit?usp=sharing"
               target="_blank"
-              class="btn"
-              ><span>Resume</span>
-              <i class="fas fa-chevron-right"></i>
+              class="btn btn-primary"
+            >
+              <i class="fas fa-file-alt"></i> View Resume
+            </a>
+            <a
+              href="https://t.me/riloraspopo"
+              target="_blank"
+              class="btn btn-secondary"
+            >
+              <i class="fab fa-telegram-plane"></i> Quick Telegram Chat
             </a>
           </div>
         </div>
@@ -180,17 +267,13 @@
     <!-- skills section starts -->
     <section class="skills" id="skills">
       <h2 class="heading">
-        <i class="fas fa-laptop-code"></i> Skills & <span>Abilities</span>
+        <span class="code-tag">// 02. TECH STACK</span>
+        Skills & <span>Technologies</span>
       </h2>
 
       <div class="container">
         <div class="row" id="skillsContainer">
-          <!-- <div class="bar">
-              <div class="info">
-                <img src="https://img.icons8.com/color/48/000000/adobe-xd.png"/>
-                <span>AdobeXD</span>
-              </div>
-            </div> -->
+          <!-- Dynamic skills loaded from skills.json -->
         </div>
       </div>
     </section>
@@ -198,28 +281,29 @@
 
     <!-- education section starts -->
     <section class="education" id="education">
-      <h1 class="heading">
-        <i class="fas fa-graduation-cap"></i> My <span>Education</span>
-      </h1>
+      <h2 class="heading">
+        <span class="code-tag">// 03. ACADEMIC CREDENTIAL</span>
+        Formal <span>Education</span>
+      </h2>
 
       <p class="qoute">
-        Education is not the learning of facts, but the training of the mind to
-        think.
+        "Education is not the learning of facts, but the training of the mind to
+        think."
       </p>
 
       <div class="box-container">
-        <div class="box">
+        <div class="box tilt">
           <div class="image">
             <img
               draggable="false"
               src="./assets/images/educat/kampus-telkom.jpg"
-              alt=""
+              alt="Telkom University"
             />
           </div>
           <div class="content">
             <h3>Bachelor of Engineering in Information Technology</h3>
-            <p>Telkom University | Bandung Indonesia</p>
-            <h4>2016 | Completed</h4>
+            <p>Telkom University | Bandung, Indonesia</p>
+            <h4><i class="fas fa-calendar-alt"></i> Graduated 2016 • Informatics Engineering</h4>
           </div>
         </div>
       </div>
@@ -229,30 +313,17 @@
     <!-- work project section starts -->
     <section class="work" id="work">
       <h2 class="heading">
-        <i class="fas fa-laptop-code"></i> Projects <span>Made</span>
+        <span class="code-tag">// 04. SHOWCASE</span>
+        Featured <span>Projects</span>
       </h2>
 
       <div class="box-container">
-        <!-- <div class="box tilt">
-      <img draggable="false" src="./assets/images/projects/portfolio1.PNG" alt="" />
-      <div class="content">
-        <div class="tag">
-        <h3>Portfolio Website</h3>
-        </div>
-        <div class="desc">
-          <p>Personal portfolio website. Don't need much info about it, just scroll down. You're here only!</p>
-          <div class="btns">
-            <a href="#" class="btn" target="_blank"><i class="fas fa-eye"></i> View</a>
-            <a href="https://github.com/Rilo-raspopo/Portfolio-Website" class="btn" target="_blank">Code <i class="fas fa-code"></i></a>
-          </div>
-        </div>
-      </div>
-    </div> -->
+        <!-- Dynamic projects loaded from projects.json -->
       </div>
 
       <div class="viewall">
-        <a href="/projects" class="btn"
-          ><span>View All</span>
+        <a href="/projects" class="btn btn-secondary">
+          <span>Explore All Repositories</span>
           <i class="fas fa-arrow-right"></i>
         </a>
       </div>
@@ -261,7 +332,10 @@
 
     <!-- experience section starts -->
     <section class="experience" id="experience">
-      <h2 class="heading"><i class="fas fa-briefcase"></i> Experience</h2>
+      <h2 class="heading">
+        <span class="code-tag">// 05. TRACK RECORD</span>
+        Work <span>Experience</span>
+      </h2>
 
       <div class="timeline">
         <div class="container right">
@@ -271,7 +345,7 @@
             </div>
             <div class="desc">
               <h3>Dinas Kesehatan Kota Metro</h3>
-              <p>May 2024 - present</p>
+              <p><i class="fas fa-clock"></i> May 2024 - Present</p>
             </div>
           </div>
         </div>
@@ -283,7 +357,7 @@
             </div>
             <div class="desc">
               <h3>Dinas Komunikasi dan Informatika Kota Metro</h3>
-              <p>January 2020 - April 2024</p>
+              <p><i class="fas fa-clock"></i> January 2020 - April 2024</p>
             </div>
           </div>
         </div>
@@ -291,54 +365,86 @@
         <div class="container right">
           <div class="content">
             <div class="tag">
-              <h2>Assistance General Manager</h2>
+              <h2>Assistant General Manager</h2>
             </div>
             <div class="desc">
               <h3>PT Telkom Indonesia | Lampung</h3>
-              <p>September 2016 - December 2019</p>
+              <p><i class="fas fa-clock"></i> September 2016 - December 2019</p>
             </div>
           </div>
         </div>
-<!-- 
-      <div class="morebtn">
-        <a href="/experience" class="btn"
-          ><span>View All</span>
-          <i class="fas fa-arrow-right"></i>
-        </a>
-      </div> -->
-
-      <!-- </div> -->
+      </div>
     </section>
     <!-- experience section ends -->
 
     <!-- contact section starts -->
     <section class="contact" id="contact">
       <h2 class="heading">
-        <i class="fas fa-headset"></i> Get in <span>Touch</span>
+        <span class="code-tag">// 06. TRANSMISSION</span>
+        Get in <span>Touch</span>
       </h2>
 
       <div class="container">
         <div class="content">
           <div class="image-box">
-            <img draggable="false" src="./assets/images/contact1.png" alt="" />
+            <div class="contact-meta">
+              <h3>Initialize Connection</h3>
+              <p>
+                Have an inquiry, project proposal, or looking to collaborate on
+                mobile, web, or IT infrastructure? Reach out directly.
+              </p>
+            </div>
+
+            <div class="contact-channels">
+              <div class="contact-item">
+                <div class="icon-wrap">
+                  <i class="fab fa-telegram-plane"></i>
+                </div>
+                <div class="info">
+                  <h4>Telegram</h4>
+                  <a href="https://t.me/riloraspopo" target="_blank">@riloraspopo</a>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="icon-wrap">
+                  <i class="fas fa-envelope"></i>
+                </div>
+                <div class="info">
+                  <h4>Email</h4>
+                  <a href="mailto:rilo.raspopo37@gmail.com">rilo.raspopo37@gmail.com</a>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="icon-wrap">
+                  <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <div class="info">
+                  <h4>Location</h4>
+                  <span>Lampung, Indonesia</span>
+                </div>
+              </div>
+            </div>
           </div>
+
           <form id="contact-form">
             <div class="form-group">
               <div class="field">
-                <input type="text" name="name" placeholder="Name" required />
+                <input type="text" name="name" placeholder="Your Name" required />
                 <i class="fas fa-user"></i>
               </div>
               <div class="field">
-                <input type="text" name="email" placeholder="Email" required />
+                <input type="email" name="email" placeholder="Your Email Address" required />
                 <i class="fas fa-envelope"></i>
               </div>
               <div class="field">
-                <input type="text" name="phone" placeholder="Phone" />
+                <input type="text" name="phone" placeholder="Phone Number (optional)" />
                 <i class="fas fa-phone-alt"></i>
               </div>
               <div class="message">
                 <textarea
-                  placeholder="Message"
+                  placeholder="Your Message / Project Details"
                   name="message"
                   required
                 ></textarea>
@@ -346,8 +452,8 @@
               </div>
             </div>
             <div class="button-area">
-              <button type="submit">
-                Submit <i class="fa fa-paper-plane"></i>
+              <button type="submit" class="btn btn-primary">
+                Send to Telegram <i class="fab fa-telegram-plane"></i>
               </button>
             </div>
           </form>
@@ -357,75 +463,40 @@
     <!-- contact section ends -->
 
     <!-- footer section starts -->
-    <section class="footer">
+    <footer class="footer">
       <div class="box-container">
         <div class="box">
-          <h3>Rilo's Portfolio</h3>
+          <h3>&lt;/&gt; Rilo.dev</h3>
           <p>
-            Thank you for visiting my personal portfolio website. Connect with
-            me over socials. <br />
-            <br />
-            Keep Rising 🚀. Connect with me over live chat on telegram!
+            Portfolio of Rilo Raspopo. Full-Stack Engineer, Mobile Developer,
+            and IT Specialist based in Lampung, Indonesia.
           </p>
         </div>
 
         <div class="box">
-          <h3>quick links</h3>
-          <a href="#home"><i class="fas fa-chevron-circle-right"></i> home</a>
-          <a href="#about"><i class="fas fa-chevron-circle-right"></i> about</a>
-          <a href="#skills"
-            ><i class="fas fa-chevron-circle-right"></i> skills</a
-          >
-          <a href="#education"
-            ><i class="fas fa-chevron-circle-right"></i> education</a
-          >
-          <a href="#work"><i class="fas fa-chevron-circle-right"></i> work</a>
-          <a href="#experience"
-            ><i class="fas fa-chevron-circle-right"></i> experience</a
-          >
+          <h3>Navigation</h3>
+          <a href="#home"><i class="fas fa-chevron-right"></i> Home</a>
+          <a href="#about"><i class="fas fa-chevron-right"></i> About</a>
+          <a href="#skills"><i class="fas fa-chevron-right"></i> Skills</a>
+          <a href="#work"><i class="fas fa-chevron-right"></i> Projects</a>
+          <a href="#experience"><i class="fas fa-chevron-right"></i> Experience</a>
+          <a href="#contact"><i class="fas fa-chevron-right"></i> Contact</a>
         </div>
 
         <div class="box">
-          <h3>contact info</h3>
-          <p><i class="fas fa-phone"></i>+62 853 7803 1373</p>
-          <p><i class="fas fa-envelope"></i>rilo.raspopo37@gmail.com</p>
-          <p><i class="fas fa-map-marked-alt"></i>Lampung, Indonesia</p>
-          <div class="share">
-            <a
-              href="https://www.linkedin.com/in/rilo-raspopo-21844412b/"
-              class="fab fa-linkedin"
-              aria-label="LinkedIn"
-              target="_blank"
-            ></a>
-            <a
-              href="https://github.com/riloraspopo"
-              class="fab fa-github"
-              aria-label="GitHub"
-              target="_blank"
-            ></a>
-            <a
-              href="mailto:rilo.raspopo37@gmail.com"
-              class="fas fa-envelope"
-              aria-label="Mail"
-              target="_blank"
-            ></a>
-            <a
-              href="https://t.me/riloraspopo"
-              class="fab fa-telegram-plane"
-              aria-label="Telegram"
-              target="_blank"
-            ></a>
-          </div>
+          <h3>Connect</h3>
+          <p><i class="fas fa-map-pin"></i> Lampung, Indonesia</p>
+          <p><i class="fas fa-paper-plane"></i> @riloraspopo on Telegram</p>
+          <p><i class="fas fa-at"></i> rilo.raspopo37@gmail.com</p>
         </div>
       </div>
 
-      <h1 class="credit">
-        Designed with <i class="fa fa-heart pulse"></i> by
-        <a href="https://www.linkedin.com/in/rilo-raspopo-21844412b/">
-          Rilo raspopo</a
-        >
-      </h1>
-    </section>
+      <div class="credit">
+        Crafted with <i class="fas fa-terminal" style="color: var(--accent-cyan);"></i> by
+        <a href="https://github.com/riloraspopo" target="_blank">Rilo Raspopo</a> •
+        Hosted on GitHub Pages
+      </div>
+    </footer>
     <!-- footer section ends -->
 
     <!-- scroll top btn -->
@@ -435,7 +506,6 @@
       class="fas fa-angle-up"
       id="scroll-top"
     ></a>
-    <!-- scroll back to top -->
 
     <!-- ==== ALL MAJOR JAVASCRIPT CDNS STARTS ==== -->
     <!-- jquery cdn -->
@@ -469,8 +539,7 @@
     <!-- scroll reveal anim -->
     <script src="https://unpkg.com/scrollreveal"></script>
 
-    <!-- ==== ALL MAJOR JAVASCRIPT CDNS ENDS ==== -->
-
-    <script src="./assets/js/script.js?v=3"></script>
+    <!-- Main JS -->
+    <script src="./assets/js/script.js?v=4"></script>
   </body>
 </html>
