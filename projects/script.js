@@ -18,15 +18,15 @@ $(document).ready(function () {
 
 document.addEventListener("visibilitychange", function () {
   if (document.visibilityState === "visible") {
-    document.title = "Projects | Portfolio Rilo raspopo";
-    $("#favicon").attr("href", "/assets/images/favicon.png");
+    document.title = "Projects Archive | Rilo Raspopo";
+    $("#favicon").attr("href", "../assets/images/favicon.png");
   } else {
-    document.title = "Come Back To Portfolio";
-    $("#favicon").attr("href", "/assets/images/favhand.png");
+    document.title = "⚡ Come back to rilo.dev";
+    $("#favicon").attr("href", "../assets/images/favhand.png");
   }
 });
 
-// fetch projects start
+// Fetch projects
 function getProjects() {
   return fetch("projects.json")
     .then((response) => response.json())
@@ -41,17 +41,24 @@ function showProjects(projects) {
   projects.forEach((project) => {
     projectsHTML += `
     <div class="grid-item ${project.category}">
-      <div class="box tilt" style="width: 380px; margin: 1rem">
-        <img draggable="false" src="/assets/images/projects/${project.image}.png" alt="project" />
+      <div class="box tilt">
+        <div class="img-wrapper">
+          <img draggable="false" src="../assets/images/projects/${project.image}.png" alt="${project.name}" />
+        </div>
         <div class="content">
+          <span class="category-badge">${project.category || "Tech"}</span>
           <div class="tag">
             <h3>${project.name}</h3>
           </div>
           <div class="desc">
             <p>${project.desc}</p>
             <div class="btns">
-              <a href="${project.links.view}" class="btn" target="_blank"><i class="fas fa-eye"></i> View</a>
-              <a href="${project.links.code}" class="btn" target="_blank">Code <i class="fas fa-code"></i></a>
+              <a href="${project.links.view}" class="btn btn-primary" target="_blank">
+                <i class="fas fa-external-link-alt"></i> Demo
+              </a>
+              <a href="${project.links.code}" class="btn btn-secondary" target="_blank">
+                <i class="fab fa-github"></i> Code
+              </a>
             </div>
           </div>
         </div>
@@ -60,33 +67,21 @@ function showProjects(projects) {
   });
   projectsContainer.innerHTML = projectsHTML;
 
-  // vanilla tilt.js
-  // VanillaTilt.init(document.querySelectorAll(".tilt"), {
-  //     max: 20,
-  // });
-  // // vanilla tilt.js
+  // Initialize Tilt
+  VanillaTilt.init(document.querySelectorAll(".tilt"), {
+    max: 10,
+    speed: 400,
+    glare: true,
+    "max-glare": 0.15,
+  });
 
-  // /* ===== SCROLL REVEAL ANIMATION ===== */
-  // const srtop = ScrollReveal({
-  //     origin: 'bottom',
-  //     distance: '80px',
-  //     duration: 1000,
-  //     reset: true
-  // });
-
-  // /* SCROLL PROJECTS */
-  // srtop.reveal('.work .box', { interval: 200 });
-
-  // isotope filter products
+  // Isotope filter products
   var $grid = $(".box-container").isotope({
     itemSelector: ".grid-item",
     layoutMode: "fitRows",
-    masonry: {
-      columnWidth: 200,
-    },
   });
 
-  // filter items on button click
+  // Filter items on button click
   $(".button-group").on("click", "button", function () {
     $(".button-group").find(".is-checked").removeClass("is-checked");
     $(this).addClass("is-checked");
@@ -98,23 +93,3 @@ function showProjects(projects) {
 getProjects().then((data) => {
   showProjects(data);
 });
-// fetch projects end
-
-// diraspopo developer mode
-document.onkeydown = function (e) {
-  if (e.keyCode == 123) {
-    return false;
-  }
-  if (e.ctrlKey && e.shiftKey && e.keyCode == "I".charCodeAt(0)) {
-    return false;
-  }
-  if (e.ctrlKey && e.shiftKey && e.keyCode == "C".charCodeAt(0)) {
-    return false;
-  }
-  if (e.ctrlKey && e.shiftKey && e.keyCode == "J".charCodeAt(0)) {
-    return false;
-  }
-  if (e.ctrlKey && e.keyCode == "U".charCodeAt(0)) {
-    return false;
-  }
-};

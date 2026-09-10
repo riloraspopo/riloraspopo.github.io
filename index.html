@@ -13,6 +13,20 @@
       content="Portfolio of Rilo Raspopo - Full-Stack Engineer, Mobile App Developer & IT Specialist."
     />
 
+    <!-- Open Graph / Social Media Preview -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://popow.my.id/" />
+    <meta property="og:title" content="Rilo Raspopo | Full Stack Engineer & IT Specialist" />
+    <meta property="og:description" content="Portfolio of Rilo Raspopo - Full-Stack Software Engineer, Flutter & Android Developer, and IT Specialist." />
+    <meta property="og:image" content="https://riloraspopo.github.io/assets/images/profile2.jpg" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://popow.my.id/" />
+    <meta name="twitter:title" content="Rilo Raspopo | Full Stack Engineer & IT Specialist" />
+    <meta name="twitter:description" content="Portfolio of Rilo Raspopo - Full-Stack Software Engineer, Flutter & Android Developer, and IT Specialist." />
+    <meta name="twitter:image" content="https://riloraspopo.github.io/assets/images/profile2.jpg" />
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -272,6 +286,14 @@
       </h2>
 
       <div class="container">
+        <div class="skills-filter">
+          <button class="filter-btn active" data-filter="all">All Stack</button>
+          <button class="filter-btn" data-filter="mobile">Mobile & Flutter</button>
+          <button class="filter-btn" data-filter="frontend">Web & Frontend</button>
+          <button class="filter-btn" data-filter="backend">Backend & Languages</button>
+          <button class="filter-btn" data-filter="devops">DevOps & Linux</button>
+        </div>
+
         <div class="row" id="skillsContainer">
           <!-- Dynamic skills loaded from skills.json -->
         </div>
@@ -373,6 +395,13 @@
             </div>
           </div>
         </div>
+      </div>
+
+      <div class="viewall" style="text-align: center; margin-top: 3.5rem;">
+        <a href="/experience" class="btn btn-secondary">
+          <span>View Detailed Timeline</span>
+          <i class="fas fa-arrow-right"></i>
+        </a>
       </div>
     </section>
     <!-- experience section ends -->

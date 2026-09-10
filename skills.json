@@ -1,114 +1,142 @@
 [
   {
     "name": "Flutter",
+    "category": "mobile",
     "icon": "https://img.icons8.com/color/48/000000/flutter.png"
   },
   {
     "name": "Android",
+    "category": "mobile",
     "icon": "https://img.icons8.com/fluency/48/000000/android-os.png"
   },
   {
     "name": "Dart",
+    "category": "mobile",
     "icon": "https://img.icons8.com/color/48/000000/dart.png"
   },
   {
     "name": "Kotlin",
+    "category": "mobile",
     "icon": "https://img.icons8.com/color/48/000000/kotlin.png"
   },
   {
     "name": "Java",
+    "category": "backend",
     "icon": "https://img.icons8.com/color/48/000000/java-coffee-cup-logo--v1.png"
   },
   {
     "name": "Python",
+    "category": "backend",
     "icon": "https://img.icons8.com/color/48/000000/python--v1.png"
   },
   {
     "name": "JavaScript",
+    "category": "frontend",
     "icon": "https://img.icons8.com/color/48/000000/javascript--v1.png"
   },
   {
     "name": "ReactJS",
+    "category": "frontend",
     "icon": "https://img.icons8.com/external-tal-revivo-color-tal-revivo/48/000000/external-react-a-javascript-library-for-building-user-interfaces-logo-color-tal-revivo.png"
   },
   {
     "name": "NodeJS",
+    "category": "backend",
     "icon": "https://img.icons8.com/color/48/000000/nodejs.png"
   },
   {
     "name": "ExpressJS",
+    "category": "backend",
     "icon": "https://img.icons8.com/fluency/48/000000/node-js.png"
   },
   {
     "name": "Firebase",
+    "category": "backend",
     "icon": "https://img.icons8.com/color/48/000000/firebase.png"
   },
   {
     "name": "TailwindCSS",
+    "category": "frontend",
     "icon": "https://raw.githubusercontent.com/devicons/devicon/refs/tags/v2.17.0/icons/tailwindcss/tailwindcss-original.svg"
   },
   {
     "name": "TypeScript",
+    "category": "frontend",
     "icon": "https://img.icons8.com/color/48/000000/typescript.png"
   },
   {
     "name": "C",
+    "category": "backend",
     "icon": "https://img.icons8.com/color/48/000000/c-programming.png"
   },
   {
     "name": "C++",
+    "category": "backend",
     "icon": "https://img.icons8.com/color/48/000000/c-plus-plus-logo.png"
   },
   {
     "name": "Rust",
+    "category": "backend",
     "icon": "https://img.icons8.com/color/48/000000/rust-programming-language.png"
   },
   {
     "name": "Elixir",
+    "category": "backend",
     "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/elixir/elixir-original.svg"
   },
   {
     "name": "Phoenix Framework",
+    "category": "backend",
     "icon": "https://cdn.simpleicons.org/phoenixframework"
   },
   {
     "name": "Shell",
+    "category": "devops",
     "icon": "https://img.icons8.com/color/48/000000/console.png"
   },
   {
     "name": "Docker",
+    "category": "devops",
     "icon": "https://img.icons8.com/color/48/000000/docker.png"
   },
   {
     "name": "Linux",
+    "category": "devops",
     "icon": "https://img.icons8.com/color/48/000000/linux--v1.png"
   },
   {
     "name": "Nginx",
+    "category": "devops",
     "icon": "https://img.icons8.com/color/48/000000/nginx.png"
   },
   {
     "name": "GitHub Actions",
+    "category": "devops",
     "icon": "https://img.icons8.com/ios-filled/50/ffffff/github.png"
   },
   {
     "name": "HTML5",
+    "category": "frontend",
     "icon": "https://img.icons8.com/color/48/000000/html-5--v1.png"
   },
   {
     "name": "CSS3",
+    "category": "frontend",
     "icon": "https://img.icons8.com/color/48/000000/css3.png"
   },
   {
     "name": "PHP",
+    "category": "backend",
     "icon": "https://img.icons8.com/offices/48/000000/php-logo.png"
   },
   {
     "name": "Git VCS",
+    "category": "devops",
     "icon": "https://img.icons8.com/color/48/000000/git.png"
   },
   {
     "name": "GitHub",
+    "category": "devops",
     "icon": "https://img.icons8.com/glyph-neue/48/ffffff/github.png"
   }
 ]

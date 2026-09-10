@@ -639,6 +639,41 @@ header .logo:hover {
   margin: 0 auto;
 }
 
+.skills-filter {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  margin-bottom: 3.5rem;
+}
+
+.skills-filter .filter-btn {
+  background: rgba(17, 24, 39, 0.7);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-full);
+  padding: 0.8rem 1.8rem;
+  font-family: var(--font-mono);
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.skills-filter .filter-btn:hover {
+  border-color: var(--border-glow);
+  color: var(--accent-cyan);
+  background: rgba(0, 242, 254, 0.08);
+}
+
+.skills-filter .filter-btn.active {
+  background: linear-gradient(135deg, rgba(0, 242, 254, 0.2), rgba(56, 189, 248, 0.2));
+  border-color: var(--accent-cyan);
+  color: var(--accent-cyan);
+  box-shadow: 0 0 15px var(--accent-cyan-glow);
+  font-weight: 700;
+}
+
 #skillsContainer {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));

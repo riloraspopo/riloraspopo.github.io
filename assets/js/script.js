@@ -105,14 +105,15 @@ async function fetchData(type = "skills") {
   return data;
 }
 
-// Render skills cards
-function showSkills(skills) {
+let allSkills = [];
+
+function renderSkills(skillsToRender) {
   let skillsContainer = document.getElementById("skillsContainer");
   if (!skillsContainer) return;
   let skillHTML = "";
-  skills.forEach((skill) => {
+  skillsToRender.forEach((skill) => {
     skillHTML += `
-      <div class="bar tilt">
+      <div class="bar tilt" data-category="${skill.category || 'all'}">
         <div class="info">
           <img src="${skill.icon}" alt="${skill.name}" loading="lazy" />
           <span>${skill.name}</span>
@@ -126,6 +127,25 @@ function showSkills(skills) {
     speed: 400,
     glare: true,
     "max-glare": 0.2,
+  });
+}
+
+// Render skills cards & filter logic
+function showSkills(skills) {
+  allSkills = skills;
+  renderSkills(allSkills);
+
+  $(".skills-filter .filter-btn").off("click").on("click", function () {
+    $(".skills-filter .filter-btn").removeClass("active");
+    $(this).addClass("active");
+    const filter = $(this).data("filter");
+
+    if (filter === "all") {
+      renderSkills(allSkills);
+    } else {
+      const filtered = allSkills.filter((s) => s.category === filter);
+      renderSkills(filtered);
+    }
   });
 }
 
