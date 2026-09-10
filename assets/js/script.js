@@ -84,9 +84,9 @@ document.addEventListener("visibilitychange", function () {
 var typed = new Typed(".typing-text", {
   strings: [
     "Full-Stack Development",
-    "Flutter & Mobile Engineering",
-    "Linux Infrastructure & GIS",
-    "Backend APIs & Python",
+    "Flutter &amp; Mobile Engineering",
+    "Linux Infrastructure &amp; GIS",
+    "Backend APIs &amp; Python",
     "IT System Architecture",
   ],
   loop: true,
