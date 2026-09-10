@@ -149,12 +149,13 @@ function showSkills(skills) {
   });
 }
 
-// Render projects cards
-function showProjects(projects) {
+let allProjects = [];
+
+function renderProjects(projectsToRender) {
   let projectsContainer = document.querySelector("#work .box-container");
   if (!projectsContainer) return;
   let projectHTML = "";
-  projects.slice(0, 10).forEach((project) => {
+  projectsToRender.slice(0, 10).forEach((project) => {
     projectHTML += `
       <div class="box tilt">
         <div class="img-wrapper">
@@ -192,6 +193,55 @@ function showProjects(projects) {
     srtop.reveal(".work .box", { interval: 150 });
   }
 }
+
+// Render projects cards & setup filter
+function showProjects(projects) {
+  allProjects = projects;
+  renderProjects(allProjects);
+
+  $(".projects-filter .filter-btn").off("click").on("click", function () {
+    $(".projects-filter .filter-btn").removeClass("active");
+    $(this).addClass("active");
+    const filter = $(this).data("project-filter");
+
+    if (filter === "all") {
+      renderProjects(allProjects);
+    } else {
+      const filtered = allProjects.filter((p) => p.category === filter);
+      renderProjects(filtered);
+    }
+  });
+}
+
+// Quick Copy CLI command & Toast Notification
+function showToast(message) {
+  const toast = document.getElementById("toast");
+  if (!toast) return;
+  toast.innerHTML = `<i class="fas fa-check-circle" style="color: var(--accent-emerald);"></i> ${message}`;
+  toast.classList.add("show");
+  clearTimeout(window.toastTimer);
+  window.toastTimer = setTimeout(() => {
+    toast.classList.remove("show");
+  }, 3000);
+}
+
+function copyCliCommand() {
+  const cmd = "curl -s https://popow.my.id/rilo.txt";
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(cmd).then(() => {
+      showToast(`Copied: <strong>${cmd}</strong>`);
+    }).catch(() => {
+      showToast(`Command: ${cmd}`);
+    });
+  } else {
+    showToast(`Command: ${cmd}`);
+  }
+}
+
+$(document).on("click", "#copy-cmd-btn, #terminal-cmd", function (e) {
+  e.preventDefault();
+  copyCliCommand();
+});
 
 // Load data
 fetchData("skills").then((data) => {

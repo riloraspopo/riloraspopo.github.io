@@ -174,11 +174,14 @@
             </div>
             <div class="terminal-title">rilo@archlinux: ~ (bash)</div>
             <div class="terminal-actions">
-              <i class="fas fa-circle" style="color: var(--accent-emerald); font-size: 0.8rem;"></i>
+              <button id="copy-cmd-btn" class="terminal-copy-btn" title="Copy CLI curl command" aria-label="Copy CLI Command">
+                <i class="far fa-copy"></i>
+                <span>copy curl</span>
+              </button>
             </div>
           </div>
           <div class="terminal-body">
-            <p class="cmd"><span class="prompt">rilo@archlinux:~$</span> neofetch --profile</p>
+            <p class="cmd" id="terminal-cmd" title="Click to copy curl command"><span class="prompt">rilo@archlinux:~$</span> <span id="cmd-text">curl -s https://popow.my.id/rilo.txt</span></p>
             <div class="terminal-grid">
               <div class="terminal-ascii">
                 <pre>
@@ -338,6 +341,14 @@
         <span class="code-tag">// 04. SHOWCASE</span>
         Featured <span>Projects</span>
       </h2>
+
+      <div class="skills-filter projects-filter">
+        <button class="filter-btn active" data-project-filter="all">All Repos</button>
+        <button class="filter-btn" data-project-filter="flutter">Flutter Apps</button>
+        <button class="filter-btn" data-project-filter="website">Web & GIS</button>
+        <button class="filter-btn" data-project-filter="android">Android Native</button>
+        <button class="filter-btn" data-project-filter="linux">Linux / DE</button>
+      </div>
 
       <div class="box-container">
         <!-- Dynamic projects loaded from projects.json -->
@@ -568,7 +579,10 @@
     <!-- scroll reveal anim -->
     <script src="https://unpkg.com/scrollreveal"></script>
 
+    <!-- Toast notification -->
+    <div id="toast" class="toast"></div>
+
     <!-- Main JS -->
-    <script src="./assets/js/script.js?v=4"></script>
+    <script src="./assets/js/script.js?v=5"></script>
   </body>
 </html>

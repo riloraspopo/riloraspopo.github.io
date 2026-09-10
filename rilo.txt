@@ -1,0 +1,38 @@
+   /\        -------------------------------------------------------------
+  /  \       RILO RASPOPO - FULL STACK ENGINEER & IT SPECIALIST
+ / /\ \      -------------------------------------------------------------
+/ /__\ \     OS      : Arch Linux x86_64 (Hyprland DE)
+\/____\/     Degree  : B.Eng in Informatics Engineering, Telkom University
+             Uptime  : 8+ Years in Software Engineering & Linux Infrastructure
+             Status  : Open for Full-Time & Freelance Engineering
+             Website : https://popow.my.id
+             Telegram: https://t.me/riloraspopo (@riloraspopo)
+             GitHub  : https://github.com/riloraspopo
+             Email   : rilo.raspopo37@gmail.com
+             Phone   : +62 853 7803 1373
+             Location: Lampung, Indonesia
+
+[ CAREER TRACK RECORD ]
+* IT Specialist                | Dinas Kesehatan Kota Metro (May 2024 - Present)
+  - Healthcare infrastructure, Linux server security, live diagnostic data feeds.
+* Full Stack Programmer        | Diskominfo Kota Metro (Jan 2020 - Apr 2024)
+  - Municipal GIS (Metro Maps), Flutter mobile apps, Linux CCTV streaming servers.
+* Assistant General Manager    | PT Telkom Indonesia Lampung (Sep 2016 - Dec 2019)
+  - Enterprise telecom infrastructure, systems deployment, regional networks.
+* Independent Engineer         | Freelance & Open Source (2016 - Present)
+  - Flutter apps, REST microservices, Linux environment ricing & automation.
+
+[ TECHNICAL ARSENAL ]
+* Mobile  : Flutter, Android (Native), Dart, Kotlin, Java
+* Backend : Python, Node.js, Express, PHP, REST APIs, Microservices
+* Web     : JavaScript, TypeScript, React, TailwindCSS, HTML5/CSS3
+* Systems : Arch Linux, Hyprland, Shell (Bash/Zsh), Docker, Nginx, Git, CCTV/GIS
+
+[ NOTABLE PROJECTS ]
+* Metro Maps     -> GIS platform with Google Maps & realtime Linux CCTV feeds
+* Metro Kita     -> Flutter mobile app with streaming CCTV & online radio
+* MEWS-Obstetri  -> Flutter emergency alert app for maternal health
+* Linux Dots     -> Custom Arch Linux + Hyprland desktop environment dotfiles
+-------------------------------------------------------------
+Run: curl -s https://popow.my.id/rilo.txt
+Contact via Telegram: @riloraspopo
