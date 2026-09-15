@@ -75,7 +75,7 @@ document.addEventListener("visibilitychange", function () {
     document.title = "Rilo Raspopo | Full Stack Engineer & IT Specialist";
     $("#favicon").attr("href", "assets/images/favicon.png");
   } else {
-    document.title = "⚡ Come back to rilo.dev";
+    document.title = "👋 Come back to rilo.dev";
     $("#favicon").attr("href", "assets/images/favhand.png");
   }
 });
@@ -226,15 +226,15 @@ function showToast(message) {
 }
 
 function copyCliCommand() {
-  const cmd = "curl -s https://popow.my.id/rilo.txt";
+  const cmd = document.getElementById("cmd-text") ? document.getElementById("cmd-text").innerText.trim() : "rilo.raspopo37@gmail.com";
   if (navigator.clipboard && navigator.clipboard.writeText) {
     navigator.clipboard.writeText(cmd).then(() => {
       showToast(`Copied: <strong>${cmd}</strong>`);
     }).catch(() => {
-      showToast(`Command: ${cmd}`);
+      showToast(`Contact: ${cmd}`);
     });
   } else {
-    showToast(`Command: ${cmd}`);
+    showToast(`Contact: ${cmd}`);
   }
 }
 
