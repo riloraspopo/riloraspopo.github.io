@@ -156,6 +156,49 @@ section {
   -webkit-text-fill-color: transparent;
 }
 
+/* Animated Ambient Floating Orbs */
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  border-radius: 50%;
+  filter: blur(85px);
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.65;
+  animation: floatOrb 18s infinite alternate ease-in-out;
+}
+
+body::before {
+  width: 550px;
+  height: 550px;
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.32) 0%, rgba(99, 102, 241, 0.18) 100%);
+  top: -80px;
+  right: -100px;
+}
+
+body::after {
+  width: 650px;
+  height: 650px;
+  background: radial-gradient(circle, rgba(14, 165, 233, 0.28) 0%, rgba(16, 185, 129, 0.2) 100%);
+  bottom: 8%;
+  left: -120px;
+  animation-duration: 22s;
+  animation-delay: -8s;
+}
+
+@keyframes floatOrb {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(90px, 95px) scale(1.18);
+  }
+  100% {
+    transform: translate(-70px, 140px) scale(0.92);
+  }
+}
+
 /* Particles Canvas */
 #particles-js {
   position: fixed;
@@ -165,7 +208,7 @@ section {
   height: 100%;
   z-index: 0;
   pointer-events: none;
-  opacity: 0.6;
+  opacity: 1;
 }
 
 /* Header & Floating Glass Navbar */
@@ -633,7 +676,9 @@ header .logo:hover {
    ABOUT SECTION
    ========================================= */
 .about {
-  background: #ffffff;
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   border-top: 1px solid var(--border-subtle);
   border-bottom: 1px solid var(--border-subtle);
 }
@@ -752,7 +797,7 @@ header .logo:hover {
    SKILLS SECTION
    ========================================= */
 .skills {
-  background: var(--bg-main);
+  background: transparent;
 }
 
 .skills .container {
@@ -850,7 +895,9 @@ header .logo:hover {
    EDUCATION SECTION
    ========================================= */
 .education {
-  background: #ffffff;
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   border-top: 1px solid var(--border-subtle);
   border-bottom: 1px solid var(--border-subtle);
 }
@@ -930,7 +977,7 @@ header .logo:hover {
    PROJECTS SECTION
    ========================================= */
 .work {
-  background: var(--bg-main);
+  background: transparent;
 }
 
 .work .box-container {
@@ -1045,7 +1092,9 @@ header .logo:hover {
    EXPERIENCE SECTION (TIMELINE)
    ========================================= */
 .experience {
-  background: #ffffff;
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   border-top: 1px solid var(--border-subtle);
   border-bottom: 1px solid var(--border-subtle);
 }
@@ -1144,7 +1193,7 @@ header .logo:hover {
    CONTACT SECTION
    ========================================= */
 .contact {
-  background: var(--bg-main);
+  background: transparent;
 }
 
 .contact .container {
